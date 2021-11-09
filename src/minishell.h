@@ -6,7 +6,7 @@
 /*   By: dsaada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 17:19:04 by dsaada            #+#    #+#             */
-/*   Updated: 2021/11/08 17:48:13 by dsaada           ###   ########.fr       */
+/*   Updated: 2021/11/09 17:39:51 by dsaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@
 # include <fcntl.h>
 # include <readline/readline.h>
 # include <readline/history.h>
+# include <dirent.h>
 
 #endif
