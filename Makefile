@@ -6,7 +6,7 @@
 #    By: dsaada <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 17:21:35 by dsaada            #+#    #+#              #
-#    Updated: 2021/11/08 18:22:11 by dsaada           ###   ########.fr        #
+#    Updated: 2021/12/06 18:16:24 by dsaada           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,10 @@ CFLAGS = -Werror -Wextra -Wextra
 
 RL_FLAGS = -L/usr/local/lib -I/usr/local/include -lreadline
 
-SRC = ./src/main.c
-
+SRC = ./src/main.c\
+	  ./src/parser/parser.c\
+	  ./src/utils/utils.c\
+      ./src/utils/utils_list.c
 OBJ = $(SRC:.c=.o)
 
 %.o: %.c
