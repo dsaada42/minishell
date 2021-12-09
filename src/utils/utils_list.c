@@ -6,7 +6,7 @@
 /*   By: dsaada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 16:47:09 by dsaada            #+#    #+#             */
-/*   Updated: 2021/12/06 16:57:22 by dsaada           ###   ########.fr       */
+/*   Updated: 2021/12/09 15:21:20 by dsaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	add_line_list(t_list *list, char *str)
 	if (new == NULL)
 		return (FAILURE);
 	new->str = str;
-	new->size = ft_strlen(str);
 	new->next = NULL;
 	if (list->start == NULL)
 		list->start = new;
@@ -49,6 +48,7 @@ int	add_line_list(t_list *list, char *str)
 int	free_list(t_list *list)
 {
 	t_token	*current;
+	t_token	*next;
 
 	if (list == NULL)
 		return (FAILURE);
@@ -66,7 +66,7 @@ int	free_list(t_list *list)
 
 int	print_list(t_list *list)
 {
-	t_line *current;
+	t_token *current;
 
 	if (list == NULL)
 		return (FAILURE);

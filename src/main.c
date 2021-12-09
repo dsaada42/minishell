@@ -6,7 +6,7 @@
 /*   By: dsaada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 17:26:03 by dsaada            #+#    #+#             */
-/*   Updated: 2021/11/09 17:39:55 by dsaada           ###   ########.fr       */
+/*   Updated: 2021/12/09 15:21:24 by dsaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ char	*get_line(void)
 int	main(int argc, char **argv)
 {
 	char	*line;
+	t_env	v;
 
 	line = get_line();
+	parser(&v, line);
+	print_list(v.list);
 	printf("you entered: %s\n", line);
 	return (EXIT_SUCCESS);
 }

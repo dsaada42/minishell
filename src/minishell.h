@@ -6,7 +6,7 @@
 /*   By: dsaada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 17:19:04 by dsaada            #+#    #+#             */
-/*   Updated: 2021/12/06 18:16:14 by dsaada           ###   ########.fr       */
+/*   Updated: 2021/12/09 15:21:34 by dsaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,19 @@ typedef	struct	s_env
 }				t_env;
 
 //utils
-int ft_strlen(char *str);
+size_t ft_strlen(char *str);
 int cmp_str(char *s1, char *s2, size_t n);
 char    *ft_strdup(char *s);
 char    *ft_substr(char *s, unsigned int start, size_t len);
 char    *ft_strjoin(char *s1, char *s2);
+//utils_list
+t_list  *init_list(void);
+int add_line_list(t_list *list, char *str);
+int free_list(t_list *list);
+int print_list(t_list *list);
+//parser
+int is_keyword(char *str);
+int tokenize(t_env *v, char *str);
+int parser(t_env *v, char *str);
 
 #endif

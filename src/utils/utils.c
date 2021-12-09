@@ -6,15 +6,15 @@
 /*   By: dsaada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 15:31:56 by dsaada            #+#    #+#             */
-/*   Updated: 2021/12/06 18:16:18 by dsaada           ###   ########.fr       */
+/*   Updated: 2021/12/09 15:21:16 by dsaada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-	int	i;
+	size_t	i;
 	
 	i = 0;
 	while (str[i])
@@ -27,10 +27,11 @@ int	cmp_str(char *s1, char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (s1[++i] && (i < n))
+	while (s1[i] && (i < n))
 	{
 		if (s1[i] != s2[i])
 			return (FAILURE);
+		i++;
 	}
 	if (i == n)
 		return (SUCCESS);
@@ -48,7 +49,7 @@ char	*ft_strdup(char *s)
 	if (!res)
 		return (NULL);
 	while (s[++i])
-		res[i] = s1[i];
+		res[i] = s[i];
 	res[i] = '\0';
 	return (res);
 }
