@@ -21,7 +21,7 @@ char	*get_line(void)
 		free(line_read);
 		line_read = (char *)NULL;
 	}
-	line_read = readline("Please enter something:");
+	line_read = readline("$< : ");
 	if (line_read && *line_read)
 		add_history(line_read);
 	return (line_read);

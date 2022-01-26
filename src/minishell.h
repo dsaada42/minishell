@@ -41,6 +41,7 @@ typedef	struct	s_env
 }				t_env;
 
 //utils
+int	is_wspace(char c);
 size_t ft_strlen(char *str);
 int cmp_str(char *s1, char *s2, size_t n);
 char    *ft_strdup(char *s);

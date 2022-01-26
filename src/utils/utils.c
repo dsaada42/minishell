@@ -12,6 +12,14 @@
 
 #include "../minishell.h"
 
+int	is_wspace(char c)
+{
+	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\r')
+		return (SUCCESS);
+	else
+		return (FAILURE);
+}
+
 size_t	ft_strlen(char *str)
 {
 	size_t	i;

@@ -57,12 +57,14 @@ int	tokenize(t_env *v, char *str)
 					i[0]++;
 					while (str[i[0]] && str[i[0]] != '\'')
 						i[0]++;
+					i[0]++;
 				}
 				else if (str[i[0]] == '\"')
 				{
 					i[0]++;
 					while (str[i[0]] && str[i[0]] != '\"')
 						i[0]++;
+					i[0]++;
 				}
 				else
 					i[0]++;
@@ -72,8 +74,13 @@ int	tokenize(t_env *v, char *str)
 				return (FAILURE);
 			add_line_list(v->list, buf); 
 		}
-		else
+		else if (is_wspace(str[i[0]]) == SUCCESS)
 			i[0]++;
+		else
+		{
+			printf("Command not found\n");
+			return (FAILURE);
+		}
 	}
 	return (SUCCESS);
 }
